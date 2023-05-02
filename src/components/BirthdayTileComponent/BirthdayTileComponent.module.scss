@@ -1,0 +1,33 @@
+.tile {
+    padding: 10px;
+    border: 2px solid #000000;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+    width:100%;
+    display: flex;
+    &:hover {
+        box-shadow: 5px 5px 5px pink;
+    }
+    .data {
+        width: 25%;
+        padding-right: 15px;
+        .label {
+            font-weight: bold;
+        }
+    }
+    .interests {
+        width: 70%
+    }
+}
+
+@media (max-width: 767px) {
+    .tile {
+        flex-direction: column;
+        .data, .interests {
+            width: 100%;
+            padding: 0;
+        }
+    }
+}

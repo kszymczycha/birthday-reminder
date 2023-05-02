@@ -1,0 +1,27 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    &-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        &-item {
+            display: inline-block;
+            margin-left: 15px;
+            &:hover {
+                font-weight: bold;
+            }
+            &-link {
+                text-decoration: none;
+                color: #000000;
+            }
+        }
+    }
+}
+
+.pages {
+    flex-basis: 100%;
+    padding-top: 25px;
+}

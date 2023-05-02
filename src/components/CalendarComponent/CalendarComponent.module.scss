@@ -1,0 +1,151 @@
+.calendar {
+    max-width: 550px;
+    margin: 0 auto;
+    &-header, &-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .month-year {
+            font-weight: bold;
+            font-size: 20px;
+            padding: 10px;
+        }
+    }
+    &-footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .btn-wrapper {
+        display: flex;
+        .nav-btn, .period-btn {
+            padding: 8px 16px;
+            font-family: "Roboto", sans-serif;
+            font-weight: bold;
+            border: 2px solid #000000;
+            background: #ffffff;
+            cursor: pointer;
+            letter-spacing: 3px;
+            transition: box-shadow 0.2s ease-in-out;
+            &:first-child {
+                margin-right: 5px;
+            }
+            &:hover {
+                box-shadow: 5px 5px 5px pink;
+            }
+
+            &.active {
+                color: #ffffff;
+                background: #000000;
+            }
+        }
+    }
+    .week-days, .days {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        .name {
+            padding: 5px;
+            margin: 5px;
+            text-align: center;
+        }
+    }
+    .days {
+        .name {
+            cursor: pointer;
+            border-bottom: 2px solid #000000;
+            box-sizing: border-box;
+            opacity: 0.7;
+            transition: opacity 0.2s ease-in-out;
+            &:hover {
+                border-bottom: 2px solid pink;
+                opacity: 1;
+            }
+            &:first-child {
+                &.day-column-one {
+                    grid-column-start: 1;
+                }
+                &.day-column-two {
+                    grid-column-start: 2;
+                }
+                &.day-column-three {
+                    grid-column-start: 3;
+                }
+                &.day-column-four {
+                    grid-column-start: 4;
+                }
+                &.day-column-five {
+                    grid-column-start: 5;
+                }
+                &.day-column-six {
+                    grid-column-start: 6;
+                }
+                &.day-column-seven {
+                    grid-column-start: 7;
+                }
+            }
+        }
+        .today {
+            opacity: 1;
+            font-weight: 700;
+        }
+
+        .alert {
+            background: rgb(255, 192, 203, 0.2);
+        }
+
+        .birthday {
+            background: pink;
+        }
+
+    }
+}
+
+.modal {
+    padding: 10px;
+    .btn-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        .close-btn {
+            padding: 8px 16px;
+            font-family: "Roboto", sans-serif;
+            font-weight: bold;
+            border: 2px solid #000000;
+            background: #ffffff;
+            cursor: pointer;
+            transition: box-shadow 0.2s ease-in-out;
+            &:hover {
+                box-shadow: 5px 5px 5px pink;
+            }
+        }
+    }
+    &-content {
+        padding: 10px;
+        .events {
+            height: 500px;
+            overflow: auto;
+            display: flex;
+            flex-wrap: wrap;
+            padding-right: 8px;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #ffffff;
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: rgb(0, 0, 0, 0.2);
+            }
+            
+            &::-webkit-scrollbar-thumb:hover {
+                background: #000000;
+            }
+
+            @media (max-width: 767px) {
+                height: 325px;
+            }
+        }
+    }
+}

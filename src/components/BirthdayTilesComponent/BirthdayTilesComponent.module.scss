@@ -1,0 +1,8 @@
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+    &-not-exists {
+        text-align: center;
+        width: 100%;
+    }
+}
