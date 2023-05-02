@@ -5,7 +5,7 @@ import { startOfToday, eachDayOfInterval, getDay, endOfMonth, format, parse, isT
 import style from './CalendarComponent.module.scss';
 import { addedReminders } from '../../store';
 import { useSelector } from "react-redux";
-import { WEEK, MONTH } from '../../data/calendar-period.data';
+// import { WEEK, MONTH } from '../../data/calendar-period.data';
 import ModalComponent from '../ModalComponent';
 import useModal from '../../hooks/use-modal.hook';
 import { IReminder } from '../../interfaces/reminder.interface';
@@ -19,7 +19,7 @@ const CalendarComponent = () => {
     let [currentMonth, setCurrentMonth] = useState(format(today, 'MMM-yyyy'));
     let firstDayCurrentMonth = parse(currentMonth, 'MMM-yyyy', new Date());
     let days = eachDayOfInterval({ start: firstDayCurrentMonth , end: endOfMonth(firstDayCurrentMonth) });
-    let [ period, setPeriod ] = useState<string>(MONTH);
+    // let [ period, setPeriod ] = useState<string>(MONTH);
     const { isOpen, toggle } = useModal();
     const [ modalData, setModalData ] = useState<IReminder[]>([]);
     const [ daySelected, setDaySelected ] = useState<Date>(new Date());
@@ -46,9 +46,9 @@ const CalendarComponent = () => {
         return reminders.some(reminder => isEqual(parseISO(reminder[field_name]), day));
     }
 
-    const handleChangePeriod = (period: string) => {
-        setPeriod(period);
-    }
+    // const handleChangePeriod = (period: string) => {
+    //     setPeriod(period);
+    // }
 
     const nextMonth = () => {
         let firstDayNextMonth = add(firstDayCurrentMonth, { months: 1 });
