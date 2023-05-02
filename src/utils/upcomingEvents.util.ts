@@ -5,7 +5,7 @@ function upcomingEvents(events: IReminder[], eventsNumber: number): IReminder[] 
         return new Date(a.birth_date).getTime() - new Date(b.birth_date).getTime();
     });
       
-    const upcomingObjects = sortedEvents.filter((event, index) => {
+    const upcomingObjects = sortedEvents.filter((_, index) => {
         return index < eventsNumber;
     });
     return upcomingObjects;
