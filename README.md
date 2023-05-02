@@ -1,3 +1,3 @@
 # Birthday Reminder
 
-Simple app based Vite to remind users about an upcoming birthday.
+Simple app based on Vite to remind users about an upcoming birthday.
