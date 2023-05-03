@@ -123,8 +123,6 @@
         .events {
             height: 500px;
             overflow: auto;
-            display: flex;
-            flex-wrap: wrap;
             padding-right: 8px;
 
             &::-webkit-scrollbar {
